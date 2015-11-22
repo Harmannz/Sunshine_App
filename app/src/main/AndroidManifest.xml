@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.sunshine.app" >
 
-    <application
+    <!-- Here we add the internet permission outside the application tag -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -17,5 +20,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
