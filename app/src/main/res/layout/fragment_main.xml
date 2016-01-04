@@ -1,18 +1,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingLeft="@dimen/activity_horizontal_margin"
-
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
-android:paddingBottom="@dimen/activity_vertical_margin"
-tools:context=".MainActivity$PlaceholderFragment">
-
-
-<ListView
-    android:id="@+id/listview_forecast"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.sunshine.app.ForecastFragment">
+
+    <!-- We set the choicemode to singlechoice to declare
+         that the list view can only show one selected item at one time.
+         But we do not want the choice mode in the single pane mode,
+         so we copy this code and put in layout-sw600dp.
+
+         A better solution is to declare a style rather than having to copy code.
+         -->
+    <ListView
+        android:id="@+id/listview_forecast"
+        style="@style/ForecastListStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
 
 </FrameLayout>
